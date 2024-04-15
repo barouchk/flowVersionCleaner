@@ -1,0 +1,9 @@
+<apex:page id="FlowVersionCleaner">
+    <apex:includeLightning />
+    <div id="flowVersionCleanerId" />
+    <script>
+        $Lightning.use('c:flowVersionCleanerWrapper', function() {
+            $Lightning.createComponent('c:flowVersionCleaner', { sessionId: '{!$Api.Session_ID}'}, 'flowVersionCleanerId');
+        });
+    </script>
+</apex:page>
